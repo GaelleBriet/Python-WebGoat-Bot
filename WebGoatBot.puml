@@ -1,0 +1,21 @@
+@startuml
+class WebGoatBot {
+    String url
+    requests.Session session
+    String lesson
+
+    __init__(self, url )
+    Boolean login(self, username, password)
+    None logout(self)
+    Integer goto_lesson(name)
+    String post_form(exercice, data)
+}
+
+class WebGoatBotSqlInjection {
+    __init__(self, url )
+    String do_exercices()
+}
+
+WebGoatBot <|-- WebGoatBotSqlInjection
+
+@enduml
